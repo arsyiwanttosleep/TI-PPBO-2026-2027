@@ -46,7 +46,7 @@ public class KalkulatorBangunDatar {
         double kelilingLingkaran = 2 * Math.PI * jariJari;
 
         // Menampilkan hasil luas dan keliling lingkaran
-        System.out.println("\n=== HASIL LINGKARAN ===");
+        System.out.println("\nHASIL LINGKARAN");
         System.out.println("Luas Lingkaran     : " + luasLingkaran);
         System.out.println("Keliling Lingkaran : " + kelilingLingkaran);
 
