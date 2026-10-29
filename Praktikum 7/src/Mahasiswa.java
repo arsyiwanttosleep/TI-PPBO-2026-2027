@@ -9,11 +9,17 @@ public class Mahasiswa {
         this.ipk = ipk;
     }
 
-    // Constructor dengan parameter
-    public Mahasiswa(String nama, String nim, double ipk) {
-        this.nama = nama; // this.nama = atribut, nama = parameter
-        this.nim = nim;
-        this.ipk = ipk;
+    // Getter
+    public String getNama() {
+        return nama;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public double getIpk() {
+        return ipk;
     }
         public void tampilkanData() {
             System.out.println("Nama: " + nama);
