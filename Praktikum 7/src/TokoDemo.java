@@ -9,27 +9,30 @@ public class TokoDemo {
 
         System.out.println("=== DAFTAR PRODUK ===");
         for (Produk p : daftarProduk) {
-            p.tampilkanData();
+            System.out.println("Kode: " + p.getKodeProduk() +
+                    " | Nama: " + p.getNamaProduk() +
+                    " | Harga: " + p.getHarga() +
+                    " | Stok: " + p.getStok());
         }
 
         System.out.println("\n=== SIMULASI PEMBELIAN ===");
-        // Beli Laptop 2 buah
-        // Menggunakan %.1f agar muncul .0 di belakang
-        System.out.printf("Membeli 2 Laptop. Total: %.1f%n", daftarProduk[0].hitungTotalHarga(2));
+        // Simulasi beli 2 Laptop
+        System.out.println("Membeli 2 Laptop. Harga Satuan: " + daftarProduk[0].getHarga());
         daftarProduk[0].kurangiStok(2);
 
-        // Beli Monitor 6 buah (stok tidak cukup)
-        System.out.printf("Membeli 6 Monitor. Total: %.1f%n", daftarProduk[3].hitungTotalHarga(6));
+        // Simulasi beli 6 Monitor (stok tidak cukup)
+        System.out.println("Membeli 6 Monitor. Harga Satuan: " + daftarProduk[3].getHarga());
         daftarProduk[3].kurangiStok(6);
 
         System.out.println("\n=== PRODUK TERMAHAL ===");
         Produk termahal = daftarProduk[0];
         for (Produk p : daftarProduk) {
-            if (p.harga > termahal.harga) {
+            // Pakai getHarga() bukan p.harga
+            if (p.getHarga() > termahal.getHarga()) {
                 termahal = p;
             }
         }
-        // Menggunakan %.1f agar muncul .0 di belakang
-        System.out.printf("Produk termahal adalah: %s dengan harga %.1f%n", termahal.namaProduk, termahal.harga);
+        // Pakai getNamaProduk() dan getHarga() bukan termahal.namaProduk
+        System.out.printf("Produk termahal adalah: %s dengan harga %.1f%n", termahal.getNamaProduk(), termahal.getHarga());
     }
 }
