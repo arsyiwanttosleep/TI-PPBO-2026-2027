@@ -8,5 +8,8 @@ public class Manager extends Pegawai {
 
     public double getTunjanganJabatan() {
         return tunjanganJabatan;
+        public void tampilkanRingkasan() {
+            System.out.println("Manager: " + nama);
+        }
     }
 }
