@@ -2,10 +2,14 @@ public class KebunBinatangDemo {
 
     public static void main(String[] args) {
 
-        Kucing k = new Kucing("Milo");
-        Anjing a = new Anjing("Rex");
+        Hewan[] daftarHewan = {
+                new Kucing("Milo"),
+                new Anjing("Rex"),
+                new Kucing("Oyen")
+        };
 
-        k.bersuara();
-        a.bersuara();
+        for (Hewan h : daftarHewan) {
+            h.bersuara();
+        }
     }
 }
